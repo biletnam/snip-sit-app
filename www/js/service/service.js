@@ -1,4 +1,4 @@
-angular.module('snip-sit', ['ionic','app-config'])
+angular.module('snip-sit')
 	.service('autocomplete', function($q) {
 
 	    return {

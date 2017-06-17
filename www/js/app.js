@@ -68,24 +68,41 @@ angular.module('snip-sit', ['ionic'])
 
 })
 
-.controller('HomeTabCtrl', function($scope) {
-  console.log('HomeTabCtrl');
-});
-
-// .run(function($ionicPlatform) {
-//   $ionicPlatform.ready(function() {
-//     if(window.cordova && window.cordova.plugins.Keyboard) {
-//       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-//       // for form inputs)
-//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-//       // Don't remove this line unless you know what you are doing. It stops the viewport
-//       // from snapping when text inputs are focused. Ionic handles this internally for
-//       // a much nicer keyboard experience.
-//       cordova.plugins.Keyboard.disableScroll(true);
+// angular.module('snip-sit')
+// .factory('appConfig',function () {
+//     var apiProps = {
+//       serviceUrls : {
+//               test: "https://api.test.sabre.com",
+//               prod: "https://api.sabre.com"
+//             },
+//       clientId : "",
+//       clientSecret : ""
+      
 //     }
-//     if(window.StatusBar) {
-//       StatusBar.styleDefault();
-//     }
-//   });
+
+//     return {apiProps:apiProps}
+
 // })
+.controller('HomeTabCtrl',function($scope,appConfig) {
+
+  console.log(appConfig.apiProps);
+}) 
+
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+
+      // Don't remove this line unless you know what you are doing. It stops the viewport
+      // from snapping when text inputs are focused. Ionic handles this internally for
+      // a much nicer keyboard experience.
+      cordova.plugins.Keyboard.disableScroll(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})

@@ -29,7 +29,10 @@
             <script src="cordova.js"></script>
 
             <!-- your app's js -->
+
             <script src="js/app.js"></script>
+            <script src="js/service/app-config.js"></script>
+            <script src="js/service/service.js"></script>
         </head>
         <body>
             <!-- <ion-pane>
@@ -69,9 +72,47 @@
         <script id="templates/home.html" type="text/ng-template">
           <ion-view view-title="SnipSit">
             <ion-content class="padding">
+                <!-- <ion-list> -->
+                  <div class="list list-inset">
+                      <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="From:">
+                      </label>
+                  </div>
+                  <div class="list list-inset">
+                      <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="To:">
+                      </label>
+                  </div>
+                  <!-- <ion-item>
+                    <ion-label fixed>To:</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+ -->
+                <!-- </ion-list> -->
+                  <div class="list list-inset">
+                    <button class="button button-positive icon icon-right ion-chevron-right">
+                        Go!
+                    </button>
+                  </div>
               <p>
                 <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
               </p>
+              <!-- <div class="list">
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Name</span>
+                  <input type="text" placeholder="Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Profession</span>
+                  <input type="text" placeholder="Profession">
+                </label>
+                <label class="item item-input item-floating-label">
+                  <span class="input-label">Favorite Song</span>
+                  <textarea placeholder="Favorite Song" ng-model="favSong"></textarea>
+                </label>
+              </div> -->
             </ion-content>
           </ion-view>
         </script>
