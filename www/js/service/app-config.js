@@ -11,5 +11,4 @@ angular.module('snip-sit')
 	    }
 
 	    return {apiProps:apiProps}
-
 })

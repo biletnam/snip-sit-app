@@ -1,41 +1,28 @@
 angular.module('snip-sit')
-	.service('autocomplete', function($q) {
+	.service('sabre', function($q,$http) {
+
+		function autocomplete (argument) {
+			
+		}
+
+		function auth (argument) {
+			// body... 
+		}
+
+		function seatMap (argument) {
+			// body... 
+		}
+
+		function flightSearch (argument) {
+			// body... 
+		}
 
 	    return {
-	    		autocomplete:function (query) {
-
-	    		}
+    		autocomplete: autocomplete, 
+    		auth: auth, 
+			seatMap: seatMap,
+			flightSearch: flightSearch
 	    }
-	})
-	.service('auth', function(){
 
-		return {
-			auth: function(){
-				return true
-			}
-		}
-	})
-	.service('seatMap', function(){
 
-		return {
-			seatMap: function(){
-				return true
-			}
-		}
-	})
-	.service('flightSearch', function(){
-
-		return {
-			flightSearch: function(){
-				return true
-			}
-		}
-	})
-	.service('bookSeat', function(){
-
-		return {
-			auth: function(){
-				return true
-			}
-		}
 	})

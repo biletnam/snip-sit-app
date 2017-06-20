@@ -42,7 +42,8 @@ angular.module('snip-sit', ['ionic'])
       url: "/about",
       views: {
         'about-tab': {
-          templateUrl: "templates/about.html"
+          templateUrl: "templates/about.html",
+          controller: 'AboutTabCtrl'
         }
       }
     })
@@ -68,24 +69,32 @@ angular.module('snip-sit', ['ionic'])
 
 })
 
-// angular.module('snip-sit')
-// .factory('appConfig',function () {
-//     var apiProps = {
-//       serviceUrls : {
-//               test: "https://api.test.sabre.com",
-//               prod: "https://api.sabre.com"
-//             },
-//       clientId : "",
-//       clientSecret : ""
-      
-//     }
+.controller('HomeTabCtrl',function($scope,appConfig,sabre,$ionicLoading) {
+  $scope.showLoader = function () {
+    $ionicLoading.show({
+      content: 'Loading',
+      animation: 'fade-in',
+      showBackdrop: true,
+      maxWidth: 200,
+      showDelay: 0
+    })
+    .then(function(){
+      //$ionicLoading.hide()
+      setTimeout(function(){
+        $ionicLoading.hide()
+      }, 3000)
+    })
 
-//     return {apiProps:apiProps}
 
-// })
-.controller('HomeTabCtrl',function($scope,appConfig) {
+  }
 
+
+  // $scope.showLoader = showLoader
   console.log(appConfig.apiProps);
+})
+
+.controller('AboutTabCtrl',function($scope,appConfig,sabre,$ionicLoading) {
+  console.log(appConfig);
 }) 
 
 
