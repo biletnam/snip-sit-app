@@ -1,15 +1,18 @@
 angular.module('snip-sit')
 	.factory('appConfig',function () {
-	    var apiProps = {
-	      serviceUrls : {
-	              test: "https://api.test.sabre.com",
-	              prod: "https://api.sabre.com"
-	            },
-	      clientId : "id",
-	      clientSecret : ""
-	      
+	    var authDetails = {
+	      clientId : "VjE6NnEyZW1jemIwdHZzdDc2NjpERVZDRU5URVI6RVhU",
+	      clientSecret : "TW5XMExqYzA="
 	    }
 
-	    return {apiProps:apiProps}
+	    var serviceUrls = {
+	              test: "https://api.test.sabre.com",
+	              prod: "https://api.sabre.com"
+	              
+	    }
 
+	    return {
+	    	authDetails:authDetails,
+	    	serviceUrls:serviceUrls
+	    }
 })

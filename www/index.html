@@ -92,13 +92,14 @@
  -->
                 <!-- </ion-list> -->
                   <div class="list list-inset">
-                    <button class="button button-positive icon icon-right ion-chevron-right">
+                    <button class="button button-positive icon icon-right ion-chevron-right" ng-click="showLoader()">
                         Go!
                     </button>
                   </div>
               <p>
                 <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
               </p>
+              <div ng-include="templates/test.html"></div>
               <!-- <div class="list">
                 <label class="item item-input item-floating-label">
                   <span class="input-label">Name</span>
