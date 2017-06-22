@@ -8,7 +8,9 @@ angular.module('snip-sit')
 
 		var snipSitApis = {
 			login: "",
-			signUp: ""
+			signUp: "",
+			sync: "",
+			booking: ""
 		}
 
 		function autocomplete (query) {
