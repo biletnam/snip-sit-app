@@ -82,5 +82,4 @@ angular.module('snip-sit')
 			sabreApis: sabreApis
 	    }
 
-
 	})
