@@ -6,6 +6,11 @@ angular.module('snip-sit')
 			autocomplete: '/v1/lists/utilities/geoservices/autocomplete/',
 		}
 
+		var snipSitApis = {
+			login: "",
+			signUp: ""
+		}
+
 		function autocomplete (query) {
 			
 		}
