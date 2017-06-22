@@ -29,13 +29,7 @@ angular.module('snip-sit')
 					console.log(response.status)
 					return 'Error: '+response.data
 				})
-
-
-
 			}
-
-
-
 		}
 
 		function seatMap (planeType) {
@@ -62,7 +56,7 @@ angular.module('snip-sit')
 				req.headers['Authorization'] = 'Basic ' + key
 				req.headers['grant_type'] = 'client_credentials'
 			}
-
+			// add query params
 			if (query != null) {
 				req.params = {
 					query:query
